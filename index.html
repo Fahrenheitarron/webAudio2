@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <link href="css/xtract-live.css" type="text/css" rel="stylesheet" />
+    <script src="js/jsXtract.min.js"></script>
+    <script src="js/audioEngine.js"></script>
+</head>
+
+<body> 
+    <div id="content">
+        <div id="controls">
+        	<button class="control-elem" id="operate">Pause</button>
+        	<button class="control-elem" id="refresh">Refresh</button>
+            <div class="row">
+                <span class="control-elem">Microphone Capture:</span>
+                <button class="control-elem" id="microphone">Start</button>
+            </div>
+            <div class="row">
+                <label class="control-elem" for="gain">Input Gain</label>
+                <input class="control-elem" id="gain" type="range" min="-6" max="12" value="0" style="width: 100px" />
+            </div>
+            <div class="row">
+                <label class="control-elem" for="mute">Mute Output</label>
+                <input class="control-elem" type="checkbox" checked id="mute" />
+            </div>
+            <div class="row">
+                <label class="control-elem" for="analysis">Function</label>
+                <select class="control-elem" id="analysis">
+                    <option value="skewness">Skewness</option>
+                    <option value="rms">RMS</option>
+                    <option value="spectralCentroid">Spectral Centroid</option>
+                    <option value="loudness">Loudness</option>
+                    <option value="sharpness">Sharpness</option>
+                    <option value="tonality">Tonality</option>
+                    <option value="smoothness">Smoothness</option>
+                </select>
+            </div>
+            <div class="row">
+                <label ref="show-mean" class="control-elem">Show Mean</label>
+                <input class="control-elem" type="checkbox" id="show-mean" />
+                <span id="show-mean-value" class="control-elem"></span>
+            </div>
+        </div>
+        <div id="response-holder">
+            <canvas id="canvas" width="670" height="400"></canvas>
+        </div>
+        <div id="formants">
+        	<label>The formants = <span id="show-formants"></span></label>
+        </div>
+    </div>
+</body>
+</html>

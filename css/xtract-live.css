@@ -1,0 +1,117 @@
+/*div#content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+div#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+div.row {
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: baseline;
+    justify-content: space-between;
+    border: 1px solid grey;
+    margin: 5px 0px;
+    padding: 5px;
+}
+
+.control-elem {
+    margin: 0px 10px;
+}
+
+div#response-holder {
+    height: auto;
+    display: flex;
+    align-items: baseline;
+    float: left;
+}
+#canvas {
+    width: 670px;
+    height: 400px;
+}*/
+
+html,body{ 
+	width: 100%;
+	background: #faf8ef;
+	font-family: "微软雅黑";
+	font-size: 16px;
+}
+
+div#content{
+	width: 90%;
+	margin: 0 auto;
+}
+
+div#controls{
+	width: 250px;
+	margin: 10px auto;
+}
+button#operate, button#refresh, button#microphone{
+	border: none;
+	outline: none;
+	text-indent: 32px;
+}
+
+#microphone,#gain,#mute,#analysis,#show-mean,#show-mean-value{ float: right;}
+
+#analysis,#gain{ margin-top: 5px;}
+#mute,#show-mean{margin-top: 10px;}
+#show-mean-value{ margin-right: 10px;}
+
+.control-elem{
+	line-height: 30px;
+}
+
+div.row{
+	margin-top: 10px;
+	border: 1px solid #999;
+	height: 30px;
+	padding: 0 10px;
+}
+
+button#operate{
+	background: url(../img/pause.png) no-repeat -1px -1px;
+	margin-left: 5px;
+}
+
+button#refresh{
+	background: url(../img/refresh.png) no-repeat -1px -1px;
+	margin-left: 50px;
+}
+
+button#microphone{
+	background: url(../img/microphone.png) no-repeat 0 7px; 
+	text-indent: 16px;
+}
+
+div#response-holder{
+	width: 670px;
+	margin: 10px auto;
+}
+
+div#formants{
+	text-align: center;
+	font-family: "微软雅黑";
+	font-size: 20px;
+}
+
+@media screen and (max-width: 520px) {
+	div#response-holder {
+		width: 100%;
+	    margin: 10px auto;
+	}
+	canvas#canvas {
+	    width: 100%;
+	    height: calc(100% - /2);
+	}
+}
